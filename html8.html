@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+  <style>
+    div, table, tr, nav, footer, main,section {
+      border: 1px solid black;
+    }
+    h1, main {border-style: none;}
+  </style>
+</head>
+<body>
+<table> 
+    <tr>
+      <th>  
+        <header>
+          <h1>this is an important header!!</h1>
+        </header>
+      </th>
+      <th>
+        <nav> this is nav commend!!
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </th>
+    </tr>
+    <tr>
+      <main> this is the main commend!!</main> 
+    </tr>
+    <tr>  
+      <td>
+        <article>
+          <h1> is the header of the article</h1>
+          <section> <h2>this is secion 1</h2> <p> this is the paragraph of section 1</p></section>
+          <section> <h2>this is secion 2</h2> <p> this is the paragraph of section 2</p></section>
+        </article>
+      </td>
+    </tr>
+    <tr> 
+      <footer>this is the footer commend!!! </footer>
+    </tr>
+</table>    
+</body>
+</html>
+<!-- 
+╔═════════════════════════════════════════════════════════╗
+║ <header>        ┌─────────────────────────────────────┐ ║
+║                 │ <nav>                               │ ║
+║                 │                      (3 menu items) │ ║
+║                 └─────────────────────────────────────┘ ║
+╠═════════════════════════════════════════════════════════╣
+║ <main>                                                  ║
+║┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓┏━━━━━━━━━━━━━━━━┓║
+║┃ <article>                           ┃┃ <aside>        ┃║
+║┃┌───────────────────────────────────┐┃┃                ┃║
+║┃│ <section>                         │┃┃ (3 menu items) ┃║
+║┃│                                   │┃┃                ┃║
+║┃│ (Heading 1)                       │┃┃                ┃║
+║┃│                                   │┃┃                ┃║
+║┃│ (A paragraph of text.)            │┃┃                ┃║
+║┃└───────────────────────────────────┘┃┃                ┃║
+║┃┌───────────────────────────────────┐┃┃                ┃║
+║┃│ <section>                         │┃┃                ┃║
+║┃│                                   │┃┃                ┃║
+║┃│ (Heading 2)                       │┃┃                ┃║
+║┃│                                   │┃┃                ┃║
+║┃│ (A paragraph of text.)            │┃┃                ┃║
+║┃│                                   │┃┃                ┃║
+║┃└───────────────────────────────────┘┃┃                ┃║
+║┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛┗━━━━━━━━━━━━━━━━┛║
+╠═════════════════════════════════════════════════════════╣
+║ <footer>                                                ║
+║ (A paragraph with copyright message.)                   ║
+╚═════════════════════════════════════════════════════════╝
+-->

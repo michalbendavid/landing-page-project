@@ -1,0 +1,1 @@
+console.table(["orange", "strawberry", "banana"])

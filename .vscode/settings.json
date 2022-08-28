@@ -1,0 +1,11 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "\"html\"": "\"html\"",
+        "\"javascript\"": "\"javascript\"",
+        "\"javascriptreact\"": "\"javascriptreact\"",
+        "\"vue-html\"": "\"vue-html\""
+    },
+    "workbench.panel.defaultLocation": "right",
+    "debug.console.closeOnEnd": true
+}
