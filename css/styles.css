@@ -28,6 +28,10 @@ h1 {
   margin: 2em 1rem;
 }
 
+.formItem {
+  display: inline-block;
+  padding: 10px;
+}
 /* form css - example - needs editing
 
 <form method="post" action="//submit.form" onSubmit="return validateForm();">
