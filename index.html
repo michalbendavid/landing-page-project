@@ -17,9 +17,14 @@
     <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
     <header class="page__header">
-      <nav class="navbar__menu" id="navbar__menu">
+      <nav class="navbar__menu" id="navbar__menu" data-nave-type="main">
         <!-- Navigation starts as empty UL that will be populated with JS -->
-        <ul class="navbar__list" id="navbar__list"></ul>
+        <ul class="navbar__list" id="navbar__list">
+          <li>About Us</li>
+          <li>International Mediation</li>
+          <li>Trademark Mediation</li>
+          <li>Crisis Manegement</li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -30,7 +35,7 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-      <section id="aboutUs" data-nav="aboutUsInfo" class="section1">
+      <section id="section_1" data-nav="AboutUs" class="section_1">
         <div class="landing__container">
           <h2>About Us</h2>
           <p>
@@ -52,9 +57,9 @@
         </div>
       </section>
       <section
-        id="internationalMed"
+        id="section_2"
         data-nav="internationlMed"
-        class="section2"
+        class="section_2"
       >
         <div class="landing__container">
           <h2>International Mediation</h2>
@@ -86,7 +91,7 @@
           />
         </div>
       </section>
-      <section id="trademarkMed" data-nav="trademarkMed" class="Section 3">
+      <section id="section_3" data-nav="trademarkMed" class="section_3">
         <div class="landing__container">
           <h2>Trademark Mediation</h2>
           <p>
@@ -118,9 +123,9 @@
         </div>
       </section>
       <section
-        id="crisisManegement"
+        id="section_4"
         data-nav="crisisManegement"
-        class="Section 4"
+        class="section_4"
       >
         <div class="landing__container">
           <h2>Crisis Manegement</h2>
@@ -155,37 +160,33 @@
     </main>
     <form method="post" action="submit">
       <fieldset id="fildSet">
-        <legend>Contact Information</legend>
-      <p class= "formItem">
-        * Name: <input
+      <legend>I want to Subscribe:</legend>
+      <label for= "name">* Name:</label>
+      <input
           type="text"
           id="name"
           name="name"
           class="form-control"
           required
         />
-      </p>
-      <p class= "formItem">
-        * Email: <input
+        <label for= "email">* Email:</label>
+        <input
           type="text"
           id="email"
           name="email"
           class="form-control"
           required
         />
-      </p>
-      <p class= "formItem">
-        * Cell phone:<input
+        <label for= "cellPhone">* Cell phone:</label>
+        <input
           type="number"
           id="cellPhone"
           name="cellPhone"
           class="form-control"
           required
         />
-      </p>
-      <p class= "formItem">
-        <input type="submit" value="submit" id="submit" class="form-control" />
-      </p>
+      
+      <input type="submit" value="submit" id="submit" class="form-control" />
       </fieldset>
     </form>
     <footer class="page__footer">

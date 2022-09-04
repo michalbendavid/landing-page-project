@@ -28,30 +28,29 @@ h1 {
   margin: 2em 1rem;
 }
 
-.formItem {
+form {
   display: inline-block;
   padding: 10px;
 }
-/* form css - example - needs editing
 
-<form method="post" action="//submit.form" onSubmit="return validateForm();">
-  <div style="max-width: 400px"></div>
-  <div style="padding-bottom: 18px; font-size: 24px">
-    Newsletter Subscription
-   style="padding-bottom: 18px">
-    NAME<span style="color: red"> *</span><br />
-     style="padding-bottom: 18px">
-    style="max-width: 300px"
-     style="max-width: 300px"
-      class="form-control"
-    />
-  style="padding-bottom: 18px">
-    EMAIL<span style="color: red"> *</span><br />
-      style="max-width: 300px"
-      class="form-control"
-    />
+form:invalid {
+  background-color: rgb(177, 101, 173);
+}
 
-*/
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.5;
+  color: yellow;
+}
+
+img {
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin: auto;
+}
+
 @media only screen and (min-width: 35em) {
   h1 {
     font-size: 7em;
@@ -93,10 +92,15 @@ section {
   padding-left: 0;
   margin: 0;
   text-align: right;
+  height: 50px;
+
 }
 
 .navbar__menu li {
   display: inline-block;
+  color: #000;
+  text-align: center;
+  padding: auto;
 }
 
 .navbar__menu .menu__link {
