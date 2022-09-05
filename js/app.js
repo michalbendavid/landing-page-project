@@ -17,10 +17,6 @@
  * Define Global Variables
 *
 */
-const newLi = document.createElement("li");
-newLi.textContent = "you did it!!";
-const list = document.getElementById("navbar__list");
-document.list.appendChild(newLi);
 
 /**
  * End Global Variables
@@ -36,14 +32,18 @@ document.list.appendChild(newLi);
 */
 
 // // build the nav
-// const navbar = document.getElementById("navbar__list");
-// const navItems = document.querySelectorAll("section");
-// const createNav = navItems.forEach((navItem)=>{
-//   const newLi = document.createElement("li");
-//   newLi.innerText = navItem.data-nav;
-//   navbar.appendChild(newLi);
-// });
-// document.nav.appendChild(createNav);
+
+const list = document.getElementById("navbar__list");
+list.appendChild(newLi);
+
+const navbar = document.getElementById("navbar__list");
+const navItems = document.querySelectorAll("section");
+const createNav = navItems.forEach((navItem)=>{
+  const newLi = document.createElement("li");
+  newLi.innerText = navItem.;
+  navbar.appendChild(newLi);
+});
+document.nav.appendChild(createNav);
 // Add class 'active' to section when near top of viewport
 
 
@@ -62,32 +62,5 @@ document.list.appendChild(newLi);
 
 // Set sections as active
 
-//form example code - needs editing 
-/*
-<script type="text/javascript">
-  function validateForm() {
-    if (isEmpty(document.getElementById("data_2").value.trim())) {
-      alert("NAME is required!");
-      return false;
-    }
-    if (isEmpty(document.getElementById("data_4").value.trim())) {
-      alert("EMAIL is required!");
-      return false;
-    }
-    if (!validateEmail(document.getElementById("data_4").value.trim())) {
-      alert("EMAIL must be a valid email address!");
-      return false;
-    }
-    return true;
-  }
-  function isEmpty(str) {
-    return str.length === 0 || !str.trim();
-  }
-  function validateEmail(email) {
-    var re =
-      /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-    return isEmpty(email) || re.test(email);
-  }
-</script>
-*/
+
 
