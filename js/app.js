@@ -33,17 +33,17 @@
 
 // // build the nav
 
-const list = document.getElementById("navbar__list");
-list.appendChild(newLi);
+
 
 const navbar = document.getElementById("navbar__list");
 const navItems = document.querySelectorAll("section");
 const createNav = navItems.forEach((navItem)=>{
   const newLi = document.createElement("li");
-  newLi.innerText = navItem.;
+  let itemText = navItem.getAttribute('data-nav');
+  newLi.innerText = itemText;
   navbar.appendChild(newLi);
 });
-document.nav.appendChild(createNav);
+createNav();
 // Add class 'active' to section when near top of viewport
 
 

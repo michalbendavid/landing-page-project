@@ -92,7 +92,7 @@ section {
   padding-left: 0;
   margin: 0;
   text-align:center;
-  height: 50px;
+  height: 70px;
 
 }
 
@@ -100,9 +100,9 @@ section {
   display: inline-block;
   color: #000;
   text-align: center;
-  padding:1em;
+  padding: 1em;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.2em;
  }
 
 .navbar__menu .menu__link {
