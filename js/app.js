@@ -38,22 +38,23 @@ const navItems = document.querySelectorAll("section");
 const createNav = navItems.forEach((navItem)=>{
   const newLi = document.createElement("li");
   let itemText = navItem.getAttribute('data-nav');
-  newLi.innerText = itemText;
+  let itemLink = "<a href=\"#" + itemText + "\">" + itemText + "</a>";
+  newLi.innerHTML = itemLink;
   newLi.className = "navListItem";
   navbar.appendChild(newLi);
 });
 createNav;
-// Add class 'active' to section when near top of viewport
+// // Add class 'active' to section when near top of viewport
 
-let listNavItems = navbar.getElementsByClassName("navListItem");
+// let listNavItems = navbar.getElementsByClassName("navListItem");
 
-for (let i = 0; i < listNavItems.length; i++) {
-    listNavItems[i].addEventListener("click", function() {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-    });
-};
+// for (let i = 0; i < listNavItems.length; i++) {
+//     listNavItems[i].addEventListener("click", function() {
+//     let current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//     });
+// };
 
 
 // Scroll to anchor ID using scrollTO event
