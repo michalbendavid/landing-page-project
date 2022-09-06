@@ -44,22 +44,36 @@ const createNav = navItems.forEach(function(navItem, i){
 });
 
 // Add class 'active' to section when near top of viewport
+//creats list of sections
+let sections = document.querySelectorAll("section");
+//sets the defalt for the first section to be active
+sections[0].classList.add('active');
+//finds the viewport hight 
+const viewH = document.documentElement.clientHeight;
+//add an event that loops the sections finds rect view, chack if it is on view and assigh as active
+// document.body.addEventListener= ("scroll"
+ window.onscroll = (() => {
+   sections.forEach(function (sec) {
+     let rect = sec.getBoundingClientRect();
+     let y = rect.y;
+     let bottom = rect.bottom;
+     let height = rect.height;
+     //sets class active if in viewport
+     if (y > viewH ) {
+       sec.classList.add('active');
+     }  
+     else {
+      sec.classList.remove('active');
+    }
+   });
+  });
 
-let sections = navbar.querySelectorAll("section");
+  //  || bottom + height < viewH
 
-for (let i = 0; i < sections.length; i++) {
-  function isSecInView(sec){
-    const rect = sec.getBoundingClientRect();
-    return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)&&
-    rect.rigth <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-};
-    sections[i].addEventListener("click", function() {
-//     let current = document.getElementsByClassName("active");
+
+
+//     sections[i].addEventListener("click", function() {
+// //     let current = document.getElementsByClassName("active");
 //     current[0].className = current[0].className.replace(" active", "");
 //     this.className += " active";
 //     });
