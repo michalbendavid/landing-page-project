@@ -52,20 +52,21 @@ sections[0].classList.add('active');
 const viewH = document.documentElement.clientHeight;
 //add an event that loops the sections finds rect view, chack if it is on view and assigh as active
 // document.body.addEventListener= ("scroll"
- window.onscroll = (() => {
-   sections.forEach(function (sec) {
-     let rect = sec.getBoundingClientRect();
-     let y = rect.y;
-     let bottom = rect.bottom;
-     let height = rect.height;
-     //sets class active if in viewport
-     if (y > viewH ) {
-       sec.classList.add('active');
-     }  
-     else {
-      sec.classList.remove('active');
-    }
-   });
+document.addEventListener("scroll", function () {
+    sections.forEach(function (sec, i) {
+      let rect = sections[i].getBoundingClientRect();
+      let top = rect.top;
+      let bottom = rect.bottom;
+      //sets class active if in viewport
+      if (bottom > 0 && bottom <= viewH && top >= 0) {
+        // for (s=0; s<sections.length;s++){
+        //   sections.classList.remove('active');
+        //   }
+        sections[i].classList.add("active");        
+       }
+      else { sections[i].classList.remove("active");
+       }
+    });
   });
 
   //  || bottom + height < viewH
