@@ -32,16 +32,28 @@
 */
 
 // // build the nav
-
+// global variables
 const navbar = document.getElementById("navbar__list");
 const navItems = document.querySelectorAll("section");
-const createNav = navItems.forEach((navItem)=>{
+//forEach loop to creat li nav items
+const createNav = navItems.forEach(function(navItem, i){
   const newLi = document.createElement("li");
+   //get the name by attribut data-nav
   let itemText = navItem.getAttribute('data-nav');
-  let itemLink = "<a href=\"#" + itemText + "\">" + itemText + "</a>";
-  newLi.innerHTML = itemLink;
+  //creat htmlcontent with claas and link
+  let itemHtml = `<a href=\"#${itemText}\" id=\"navLink_${[i]}\">${itemText}</a>`;
+  newLi.innerHTML = itemHtml;
   newLi.className = "navListItem";
+  //append new li to nav bar
   navbar.appendChild(newLi);
+  // adding scroll to the links
+  //choosing the <a> elements
+  let navLinksItem = document.getElementById('navLink_'+ [i]);
+  navLinksItem.addEventListener("click", (e)=> {
+    e.preventDefault();
+    document.getElementById(itemText).scrollIntoView( {behavior: "smooth"}); 
+    });
+   
 });
 createNav;
 // // Add class 'active' to section when near top of viewport
@@ -56,9 +68,7 @@ createNav;
 //     });
 // };
 
-
 // Scroll to anchor ID using scrollTO event
-
 
 /**
  * End Main Functions
