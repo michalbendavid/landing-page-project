@@ -46,14 +46,15 @@ const createNav = navItems.forEach(function(navItem, i){
   newLi.className = "navListItem";
   //append new li to nav bar
   navbar.appendChild(newLi);
-  // adding scroll to the links
-  //choosing the <a> elements
+ // adding scroll to the links
+  //choosing the <a> elements by id
   let navLinksItem = document.getElementById('navLink_'+ [i]);
+  //add an event listener to the links and scroll into veiw by id of the section
   navLinksItem.addEventListener("click", (e)=> {
     e.preventDefault();
     document.getElementById(itemText).scrollIntoView( {behavior: "smooth"}); 
     });
-   
+
 });
 createNav;
 // // Add class 'active' to section when near top of viewport
