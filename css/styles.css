@@ -51,6 +51,18 @@ img {
   margin: auto;
 }
 
+/*--nav mobile view--*/
+
+.navbar__menu li .navbar__menu .menu__link {
+  display: none;
+  color: #000;
+  text-align: center;
+  padding: 0;
+  font-weight: bold;
+  font-size: 75%;
+ }
+
+
 @media only screen and (min-width: 35em) {
   h1 {
     font-size: 7em;
@@ -92,7 +104,7 @@ section {
   padding-left: 0;
   margin: 0;
   text-align:center;
-  height: 70px;
+  height:70px;
 
 }
 
@@ -100,14 +112,14 @@ section {
   display: inline-block;
   color: #000;
   text-align: center;
-  padding: 1em;
+  padding: 0.5em;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
  }
 
 .navbar__menu .menu__link {
   display: block;
-  padding: 1em;
+  padding: 0.5em;
   font-weight: bold;
   text-decoration: none;
   color: #000;

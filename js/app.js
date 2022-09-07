@@ -39,60 +39,45 @@ const createNav = navItems.forEach(function(navItem, i){
   navLinksItem.addEventListener("click", (e)=> {
     e.preventDefault();
     document.getElementById(itemText).scrollIntoView( {behavior: "smooth"}); 
-    });
+    
+   });
     
 });
 
 // Add class 'active' to section when near top of viewport
 //creats list of sections
 let sections = document.querySelectorAll("section");
-//sets the defalt for the first section to be active
-sections[0].classList.add('active');
-//finds the viewport hight 
+sections[0].classList.add("active");
 const viewH = document.documentElement.clientHeight;
-//add an event that loops the sections finds rect view, chack if it is on view and assigh as active
-// document.body.addEventListener= ("scroll"
-document.addEventListener("scroll", function () {
-    sections.forEach(function (sec, i) {
+document.addEventListener("scroll",function() {
+  for (let i=0 ; i<sections.length ; i++){
       let rect = sections[i].getBoundingClientRect();
       let top = rect.top;
       let bottom = rect.bottom;
-      //sets class active if in viewport
-      if (bottom > 0 && bottom <= viewH && top >= 0) {
-        // for (s=0; s<sections.length;s++){
-        //   sections.classList.remove('active');
-        //   }
-        sections[i].classList.add("active");        
-       }
-      else { sections[i].classList.remove("active");
-       }
-    });
+      if (bottom >= 0 && bottom<=viewH && top>=0) {
+      sections[i].classList.add("active");
+      } else {sections[i].classList.remove("active");}
+    };
   });
 
-  //  || bottom + height < viewH
-
-
-
+ 
 //     sections[i].addEventListener("click", function() {
 // //     let current = document.getElementsByClassName("active");
 //     current[0].className = current[0].className.replace(" active", "");
 //     this.className += " active";
 //     });
 // };
+function formValid(){
+  let myForm = document.getElementById("form");
+  myForm.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    document.getElementById("formMessage").innerHTML="Submitted successfully!";
+ });
+}
+formValid();
 
-// Scroll to anchor ID using scrollTO event
 
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
 
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
 
 
 
