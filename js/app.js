@@ -18,13 +18,12 @@ const navbar = document.getElementById("navbar__list");
 const navItems = document.querySelectorAll("section");
 
 //forEach loop to create li nav items
-const createNav = navItems.forEach(function(navItem, i){
+function createNav () {
+  navItems.forEach(function(navItem, i){
   const newLi = document.createElement("li");
-
-   //get the name by attribut data-nav
+ //get the name by attribut data-nav
   let itemText = navItem.getAttribute('data-nav');
-
-  //creat htmlcontent with id and link
+ //creat htmlcontent with id and link
   let itemHtml = `<a href=\"#${itemText}\" id=\"navLink_${[i]}\">${itemText}</a>`;
   newLi.innerHTML = itemHtml;
   newLi.className = "navListItem";
@@ -35,20 +34,20 @@ const createNav = navItems.forEach(function(navItem, i){
  // adding scroll to the links
   //choosing the <a> elements by id
   let navLinksItem = document.getElementById('navLink_'+ [i]);
+  navLinksItem.classList.remove("active");
   //add an event listener to the links and scroll into veiw by id of the section
   navLinksItem.addEventListener("click", (e)=> {
     e.preventDefault();
-    document.getElementById(itemText).scrollIntoView( {behavior: "smooth"}); 
+    document.getElementById(itemText).scrollIntoView( {behavior: "smooth"});
     navLinksItem.classList.add("active");
-    for (let i=0; i<navLinksItem.length; i++){
-      if (navLinksItem !== this){
-        navLinksItem.classList.remove("active");
-      }
-    }
-  });
-    
-});
+   });
 
+  });
+} 
+createNav(); 
+ 
+
+    
 // Add class 'active' to section when near top of viewport
 //creats list of sections
 let sections = document.querySelectorAll("section");
