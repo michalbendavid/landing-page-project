@@ -8,45 +8,31 @@
  *  JS Standard: ESlint
 */
 
-// build the navbar
-
 // global variables
 const navbar = document.getElementById("navbar__list");
 const navItems = document.querySelectorAll("section");
 
-//forEach loop to create li nav items
+//function to create li nav items
 function createNav () {
   navItems.forEach(function(navItem, i){
   const newLi = document.createElement("li");
- //get the name by attribut data-nav
   let itemText = navItem.getAttribute('data-nav');
- //creat htmlcontent with id and link
   let itemHtml = `<a href=\"#${itemText}\" class=\"navLink\" id=\"navLink_${[i]}\">${itemText}</a>`;
   newLi.innerHTML = itemHtml;
   newLi.className = "navListItem";
-
-  //append new li to nav bar
   navbar.appendChild(newLi);
 
- // adding scroll to the links
-  //choosing the <a> elements by id
+ // adding scroll to the ancore when clickink the links
   let navLinksItem = document.getElementById('navLink_'+ [i]);
-  
-  //add an event listener to the links and scroll into veiw by id of the section
   navLinksItem.addEventListener("click", (e)=> {
-  
     e.preventDefault();
     document.getElementById(itemText).scrollIntoView( {behavior: "smooth"});
-  
    });
-
-  });
+ });
 } 
 createNav(); 
  
-   
-// Add class 'active' to section when near top of viewport
-//creats list of sections
+// Add class 'active' to section and navbar items when in viewport
 let navLinks = document.querySelectorAll(".navLink");
 let sections = document.querySelectorAll("section");
 sections[0].classList.add("active");
@@ -64,6 +50,7 @@ document.addEventListener("scroll",function() {
     };
   });
 
+//form submit message function
  
 function formValid(){
   let myForm = document.getElementById("form");
@@ -73,9 +60,3 @@ function formValid(){
  });
 }
 formValid();
-
-
-
-
-
-
