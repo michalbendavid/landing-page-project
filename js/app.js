@@ -39,8 +39,13 @@ const createNav = navItems.forEach(function(navItem, i){
   navLinksItem.addEventListener("click", (e)=> {
     e.preventDefault();
     document.getElementById(itemText).scrollIntoView( {behavior: "smooth"}); 
-    
-   });
+    navLinksItem.classList.add("active");
+    for (let i=0; i<navLinksItem.length; i++){
+      if (navLinksItem !== this){
+        navLinksItem.classList.remove("active");
+      }
+    }
+  });
     
 });
 
