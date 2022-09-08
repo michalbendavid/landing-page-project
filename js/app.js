@@ -42,7 +42,7 @@ document.addEventListener("scroll",function() {
       let rect = sections[i].getBoundingClientRect();
       let top = rect.top;
       let bottom = rect.bottom;
-      if (bottom >= 70 && top<=viewH) {
+      if (top<=viewH && top>=20) {
         sections[i].classList.add("active");
         navLinks[i].classList.add("active");
       } else {sections[i].classList.remove("active");
